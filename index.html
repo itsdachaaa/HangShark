@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>HangShark 🦈</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href = "style2Dark.css">
+  <link rel="stylesheet" href = "style3Light.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <div id="main-menu">
+      <h1 class="title">WELCOME TO <span class="highlight">HANGSHARK</span> 🦈</h1>
+      <div class="menu-card">
+        <button class="menu-btn" id="playBtn">🎮 Play</button>
+        <button class="menu-btn" id="settingsBtn">⚙️ Settings</button>
+        <button class="menu-btn" id="randomBtn">🎲 Start Random Game</button>
+        <button class="menu-btn" id="aboutBtn">ℹ️ About</button>
+      </div>
+    </div>
+
+    <div id="categories" style="display:none;">
+      <button class="back-btn" id="backToMain1">← Back</button>
+      <h2 class="title">Choose a Category</h2>
+      <div class="menu-card">
+        <div id="category-buttons"></div>
+      </div>
+    </div>
+
+    <div id="settings" style="display:none;">
+      <button class="back-btn" id="backToMain2">← Back</button>
+      <h2 class="title">Settings ⚙️</h2>
+      <div class="menu-card">
+        <div class="setting-option">
+          <label>🔊 Sound Effects</label>
+          <input type="checkbox" id="soundToggle" checked>
+        </div>
+
+        <div class="setting-option">
+          <label>🎵 Background Music</label>
+          <input type="checkbox" id="musicToggle" checked>
+        </div>
+
+        <div class="setting-option">
+          <label>🌈 Theme</label>
+          <select id="themeSelect">
+            <option value="default">Ocean Blue</option>
+            <option value="dark">Deep Ocean</option>
+            <option value="light">Sweet Coral</option>
+          </select>
+        </div>
+
+        <div class="setting-option">
+          <label>🏝️ Background</label>
+          <select id="backgroundSelect">
+            <option value="background.jpg">Default</option>
+            <option value="background2.jpg">Abyss</option>
+            <option value="background3.jpeg">Coral Reef</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div id="about">
+      <button class="back-btn" id="backToMain3">← Back</button>
+      <h2 class="title">About the Game</h2>
+      <div class="menu-card">
+        <p><b>Welcome to HANGSHARK 🦈!</b><br>
+          <br> HANGSHARK is a Hangman game with an ocean-themed twist!
+          <br>The game is simple, guess the hidden word by choosing one letter at a time. 
+          <br><b>BUT WATCH OUT!</b> You only have 6 wrong guesses before the shark gets caught for dinner&#127860;!</p>
+      </div>
+    </div>
+
+    <div id="game" style="display:none;">
+      <button class="back-btn" id="backToMenu">← Back to Menu</button>
+      <h3 class="catline">Category: <span id="category-name"></span></h3>
+
+      <div id="gallows">
+        <img id="stage" alt="HangShark stage" src="script.js">
+      </div>
+
+      <div id="word"></div>
+      <div id="letters"></div>
+      <p id="message"></p>
+
+      <div id="end-controls">
+        <button id="play-again">Play Again</button>
+        <button id="new-category">Choose New Category</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
